@@ -1,0 +1,25 @@
+1. Po utworzeniu indeksu Lucene, utworzone zostały pliki:
+- _0.cfe
+- _0.cfs
+- _0.si
+- segments_1
+- write.lock
+
+Zapytanie "title:urodzić" zwraca:
+Found 2 matching docs.
+1. 9780679777489	Urodzić się na nowo
+2. 9780316485616	Naturalnie urodzeni mordercy
+
+2. Po uruchomieniu drugi raz programu, tworzone są pliki:
+- _1.cfe
+- _1.cfs
+- _1.si
+- segments_2
+
+Oznacza to, że indeks nie został nadpisany, a rozszerzony o nowe dokumenty.
+Zapytanie "title:urodzić" zwraca:
+Found 4 matching docs.
+1. 9780679777489	Urodzić się na nowo
+2. 9780679777489	Urodzić się na nowo
+3. 9780316485616	Naturalnie urodzeni mordercy
+4. 9780316485616	Naturalnie urodzeni mordercy
